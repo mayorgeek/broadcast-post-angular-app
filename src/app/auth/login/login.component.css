@@ -1,0 +1,27 @@
+/* Error Styles */
+.error-input-text {
+  color: red;
+  font-size: small;
+}
+
+/* Components Styles */
+.input-field {
+  display: block;
+  margin: 16px 0;
+}
+
+.login-button {
+  margin: 8px 0 0 0;
+  background-color: blue;
+  color: white;
+}
+
+.form-card {
+  margin: 36px auto 0 auto;
+  padding: 24px;
+  max-width: 600px;
+}
+
+.form-card-title {
+  margin-bottom: 24px;
+}

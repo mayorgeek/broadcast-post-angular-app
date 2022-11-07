@@ -1,0 +1,45 @@
+.back-button {
+  background-color: grey;
+  color: white;
+  margin-left: 64px;
+}
+
+.page-wrapper {
+  margin: 36px auto 0 auto;
+  padding: 36px 64px;
+}
+
+.post-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.post-image {
+  margin-top: 40px;
+}
+
+.subheader {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.posted-at {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.posted-by {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-description {
+  font-size: medium;
+  font-weight: 400;
+  margin-top: 40px;
+}

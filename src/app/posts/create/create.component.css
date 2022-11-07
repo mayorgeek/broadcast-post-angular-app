@@ -1,0 +1,41 @@
+/* Error Styles */
+.error-input-text {
+  color: red;
+  font-size: small;
+}
+
+/* Components Styles */
+.input-field {
+  display: block;
+  margin: 16px 0;
+}
+
+.create-post-button {
+  background-color: blue;
+  color: white;
+}
+
+.cancel-button {
+  margin-right: 8px;
+  background-color: grey;
+  color: #171717;
+}
+
+.form-actions {
+  margin-top: 8px;
+}
+
+.form-card {
+  margin: 36px auto 0 auto;
+  padding: 24px;
+  max-width: 600px;
+}
+
+.form-card-title {
+  margin-bottom: 24px;
+}
+
+.file-input {
+  display: block;
+  margin-top: 8px;
+}

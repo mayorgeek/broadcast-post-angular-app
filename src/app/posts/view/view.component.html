@@ -1,0 +1,22 @@
+<a class="back-button" routerLink="/" mat-stroked-button>Back</a>
+<main class="page-wrapper">
+  <header>
+    <h1 class="post-title">{{post.title}}</h1>
+    <div class="subheader">
+      <span class="posted-by">
+        <mat-icon>account_circle</mat-icon>
+        {{post.user.name}}
+      </span>
+        <span class="posted-at">
+        <mat-icon>calendar_today</mat-icon>
+          {{post.createdAt | date }}
+      </span>
+    </div>
+  </header>
+  <section>
+    <img class="post-image" [src]="post.postImg" [alt]="post.title"/>
+    <p class="post-description">
+      {{post.description}}
+    </p>
+  </section>
+</main>

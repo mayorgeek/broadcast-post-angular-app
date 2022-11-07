@@ -1,0 +1,50 @@
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+<mat-card class="form-card">
+  <mat-card-title class="form-card-title">Create an Account</mat-card-title>
+  <mat-card-content>
+    <form (ngSubmit)="register()" [formGroup]="registerForm">
+
+      <div class="input-field">
+        <mat-label>Profile Picture</mat-label>
+        <input (change)="handleFileUpload($event)" class="file-input" accept="image/*" type="file" required>
+      </div>
+
+      <mat-form-field class="input-field">
+        <mat-label>Name</mat-label>
+        <input type="text" matInput formControlName="name" required>
+        <mat-error class="error-input-text" *ngIf="registerForm.get('name')?.touched && registerForm.get('name')?.hasError('required')">
+          This field is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input-field">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" required>
+        <mat-error class="error-input-text" *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.hasError('required')">
+          This field is required.
+        </mat-error>
+        <mat-error class="error-input-text" *ngIf="registerForm.get('email')?.hasError('email')">
+          This email is not valid.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input-field">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" required>
+        <mat-error class="error-input-text" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+          This field is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input-field">
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" matInput formControlName="passwordConfirm" required>
+        <mat-error class="error-input-text" *ngIf="registerForm.get('passwordConfirm')?.touched && registerForm.get('passwordConfirm')?.invalid">
+          This field is required.
+        </mat-error>
+      </mat-form-field>
+
+      <button [disabled]="registerForm.invalid && profilePic == null" class="register-button" type="submit" mat-raised-button>Register</button>
+    </form>
+  </mat-card-content>
+</mat-card>

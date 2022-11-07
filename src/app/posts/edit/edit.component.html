@@ -1,0 +1,29 @@
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+<mat-card class="form-card">
+  <mat-card-title class="form-card-title">Edit Post</mat-card-title>
+  <mat-card-content>
+    <form (ngSubmit)="updatePost()" [formGroup]="updatePostForm">
+      <div class="input-field">
+        <mat-label>Post Image</mat-label>
+        <input (change)="handleFileUpload($event)" class="file-input" accept="image/*" type="file" required>
+
+        <img [src]="post.postImg" class="post-image"  alt="Post Image">
+      </div>
+
+      <mat-form-field class="input-field">
+        <mat-label>Title</mat-label>
+        <input type="text" matInput formControlName="title" required>
+      </mat-form-field>
+
+      <mat-form-field class="input-field">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" required></textarea>
+      </mat-form-field>
+
+      <div class="form-actions">
+        <a class="cancel-button" routerLink="/" mat-raised-button>Cancel</a>
+        <button [disabled]="updatePostForm.invalid" class="update-post-button" type="submit" mat-raised-button>Submit</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,25 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blue;
+  color: white;
+  padding: 0 64px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.page-links {
+  background-color: #4949a8;
+  color: white;
+  margin-left: 16px;
+  text-transform: capitalize;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+}

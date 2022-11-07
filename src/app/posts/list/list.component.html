@@ -1,0 +1,19 @@
+<div *ngIf="posts" class="list-wrapper">
+  <ng-container *ngFor="let post of posts">
+    <mat-card class="post-card">
+      <mat-card-content class="post-card-content">
+        <img [src]="post.postImg" class="post-image"  [alt]="post.title"/>
+      </mat-card-content>
+      <mat-card-subtitle class="post-card-title">{{post.title}}</mat-card-subtitle>
+      <mat-card-footer class="post-card-footer">
+        <button (click)="viewPost(post.id)" class="post-view-button" type="button" mat-raised-button>View</button>
+        <button (click)="editPost(post.id)" class="post-edit-button" type="button" mat-raised-button>Edit</button>
+        <button (click)="delete(post.id)" class="post-delete-button" type="button" mat-raised-button>Delete</button>
+      </mat-card-footer>
+    </mat-card>
+  </ng-container>
+</div>
+
+<div *ngIf="!posts">
+  <h1>No posts found!</h1>
+</div>

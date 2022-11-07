@@ -1,0 +1,18 @@
+.toolbar {
+  background-color: blue;
+  color: white;
+  margin-bottom: 32px;
+  padding: 0 64px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.create-post-button {
+  background-color: #4949a8;
+  color: white;
+  margin-left: 36px;
+  text-transform: capitalize;
+}

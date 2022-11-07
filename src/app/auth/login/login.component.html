@@ -1,0 +1,28 @@
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+<mat-card class="form-card">
+  <mat-card-title class="form-card-title">Sign in to Your Account</mat-card-title>
+  <mat-card-content>
+    <form (ngSubmit)="login()" [formGroup]="loginForm">
+      <mat-form-field class="input-field">
+        <mat-label>Enter your email</mat-label>
+        <input type="email" matInput formControlName="email" required>
+        <mat-error class="error-input-text" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('required')">
+          This field is required.
+        </mat-error>
+        <mat-error class="error-input-text" *ngIf="loginForm.get('email')?.hasError('email')">
+          This email is not valid.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input-field">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" required>
+        <mat-error class="error-input-text" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+          This field is required.
+        </mat-error>
+      </mat-form-field>
+
+      <button [disabled]="loginForm.invalid" class="login-button" type="submit" mat-raised-button>Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>
